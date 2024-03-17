@@ -8,8 +8,8 @@
     <title>Woosh</title>
 </head>
 <body>
-    <header>
-        <h1 class="title">Woosh</h1>
+    <header class="hide-mobile">
+        <h1 class="title-hm">Woosh</h1>
         <nav class="h-nav">
             <ul class="h-nav-list">
                 <li>
@@ -36,14 +36,30 @@
             </ul>
         </nav>
     </header>
+    <header class="show-mobile">
+        <h1 class="title-sm">Woosh</h1>
+        <img class="icon-menu" src="/assets/icons/menu.svg">
+    </header>
     <main>
         <section class="motto">
-            <h2>
-                ¡Soluciones digitales para tu negocio!
-            </h2>
             <h3>
-                Diseño y desarrollo web
+                <span>Diseño</span>
+                <img src="/assets/icons/sparkle.svg">
+                <span>Desarrollo</span>
             </h3>
+            <h2>
+                Soluciones digitales para tu negocio
+            </h2>
+            <button class="btn-contact">Contáctanos</button>
+        </section>
+        <section class="benefits">
+            <h2>Mantente competitivo en el entorno digital</h2>
+            <h3>Aumenta la conversión</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, corporis quaerat nemo consequuntur sint doloribus asperiores officiis unde beatae itaque. Inventore, ratione tenetur! Et dolorem eligendi natus animi sit earum.</p>
+            <h3>Optimiza tu página</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam voluptatem totam vero veritatis odit qui maiores, maxime atque aperiam ipsum omnis pariatur quam aut dignissimos iusto eos laudantium eligendi natus?</p>
+            <h3>(Tercer benificio)</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur officia obcaecati quaerat, exercitationem accusantium autem optio nostrum, quas asperiores praesentium harum? Neque esse, in doloremque possimus molestiae voluptates dicta corporis.</p>
         </section>
     </main>
     <script src="main.js"></script>

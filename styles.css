@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 @font-face {
     font-family: 'Recoleta Alt Bold';
     src:url(/Fonts/Recoleta-Bold.ttf);
@@ -14,42 +16,66 @@
 }
 
 body{
-    background-color: #FCEADC;
-    height: 1000px;
+    background-color: #554BA1;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
 }
-
 
 /* * Header y navbar */
 
-header{
+.hide-mobile{
     display: flex;
     height: 100px;
     flex-direction: row;
     width: 100%;
     align-items: center;
+    background-color: #312B61;
 }
 
-::-webkit-scrollbar {
-    display: none;
+.show-mobile{
+    display: flex;
+    height: 84px;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #312B61;
 }
 
-.title{
-    position: relative;
+.icon-menu{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+h1{
     font-family: 'Recoleta Alt Bold';
-    color: #554BA1;
-    font-size: 50px;
+    color: #FCEADC;
+    font-size: 35px;
+}
+
+.title-hm{
+    position: relative;
     width: 30%;
     left: 40px;
 } 
 
-nav{
+.title-sm{
+    position: relative;
+    margin-left: 20px;
+    width: auto;
+    text-align: center;
+    left: auto;
+}
+
+.h-nav{
     width: 70%;
     display: flex;
     align-items: center;
 }
 
-ul{
+.h-nav-list{
     width: 100%;
     position: relative;
     display: flex;
@@ -61,7 +87,7 @@ ul{
 a {
     font-family: 'Recoleta Alt Bold';
     text-decoration: none;
-    color: #554BA1;
+    color: #FCEADC;
 }
 
 /* * Cuerpo de la página */
@@ -75,15 +101,103 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #312B61;
-    height: 200px;
+    justify-content: center;
+    background-color: #554BA1;
+    height: 500px;
+    width: 100vw;
 }
 
 h2, h3{
-    font-family: 'Recoleta Alt Bold';
     color: #FCEADC;
+    text-align: center;
 }
 
 h2{
-    margin-top: 50px;
+    font-family: 'Recoleta Alt Bold';
+    font-size: 40px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+}
+
+h3{
+    font-family: 'Quicksand';
+    font-size: 20px;
+}
+
+h3 img{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+/* * Beneficios */ 
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCEADC;
+    border-radius: 20px 20px 0 0;
+}
+
+.benefits h2{
+    margin-bottom: 0px;
+    color: #312B61;
+}
+
+.benefits h3{
+    font-family: 'Recoleta Alt Bold';
+    font-size: 28px;
+    margin: 10px 0;
+    color: #312B61;
+}
+
+.benefits p{
+    font-family: 'Quicksand';
+    color: #312B61;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.btn-contact{
+    border-radius: 10px;
+    background-color: #FA4B22;
+    color: #FCEADC;
+    font-family: 'Quicksand';
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    height: 38px;
+    width: 180px;
+}
+
+@media screen and (min-width: 1em) and (max-width: 39.9em){
+    .hide-mobile{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9em){
+    .hide-mobile{
+        display: none;
+    }
+}
+  
+@media screen and (min-width: 64em) and (max-width: 74.9em){
+    .show-mobile{
+        display: none;
+    }
+}
+  
+@media screen and (min-width: 75em){
+    .show-mobile{
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

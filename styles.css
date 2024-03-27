@@ -1,25 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-@font-face {
-    font-family: 'Recoleta Alt Bold';
-    src:url(/Fonts/Recoleta-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'Recoleta Alt Normal';
-    src: url('/Fonts/RecoletaAlt-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Recoleta Alt Medium';
-    src: url('/Fonts/Recoleta-Medium.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 body{
     background-color: #554BA1;
     margin: 0;
     height: 100vh;
     width: 100vw;
+}
+
+p{
+    max-width: 550px;
 }
 
 /* * Header y navbar */
@@ -31,6 +22,7 @@ body{
     width: 100%;
     align-items: center;
     background-color: #312B61;
+    z-index: 1;
 }
 
 .show-mobile{
@@ -42,6 +34,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: #312B61;
+    z-index: 1;
 }
 
 .btn-menu{
@@ -119,19 +112,18 @@ body{
     margin-right: 24px;
 }
 
-h1{
-    font-family: 'Recoleta Alt Bold';
-    color: #FCEADC;
-    font-size: 35px;
+.logo{
+    height: 70px;
+    width: 140px;
 }
 
-.title-hm{
+.logo-hm{
     position: relative;
     width: 30%;
     left: 40px;
 } 
 
-.title-sm{
+.logo-sm{
     position: relative;
     margin-left: 20px;
     width: auto;
@@ -155,7 +147,8 @@ h1{
 }
 
 a {
-    font-family: 'Recoleta Alt Bold';
+    font-family: 'Merriweather';
+    font-weight: 700;
     text-decoration: none;
     color: #FCEADC;
 }
@@ -189,9 +182,22 @@ h2, h3{
 }
 
 h2{
-    font-family: 'Recoleta Alt Bold';
+    font-family: 'Merriweather';
+    font-weight: 700;
     margin-bottom: 50px;
     padding: 0 30px;
+}
+
+.motto h3{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgb(143,140,195, 0.5);
 }
 
 h3{
@@ -200,10 +206,10 @@ h3{
 }
 
 h3 img{
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 20px;
 }
 
 .btn-contact{
@@ -233,23 +239,31 @@ h3 img{
     margin-bottom: -20px;
 }
 
+.benefits .b-sparkle{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 20px 20px;
+}
+
 .benefits h2{
     padding: 0;
     font-size: 40px;
     margin: 10px 30px 10px 30px;
-    color: #312B61;
+    color: #1D1918;
 }
 
 .benefits h3{
-    font-family: 'Recoleta Alt Bold';
+    font-family: 'Merriweather';
+    font-weight: 700;
     font-size: 28px;
     margin: 10px 30px 10px 30px;
-    color: #312B61;
+    color: #1D1918;
 }
 
 .benefits p{
     font-family: 'Quicksand';
-    color: #312B61;
+    color: #1D1918;
     text-align: center;
     margin: 10px 30px 10px 30px;
 }
@@ -276,9 +290,9 @@ h3 img{
     align-items: center;
     justify-content: center;
     padding-top: 20px;
-    background-color: #8f8cc3;
+    background-color: #1D1918;
     border-radius: 20px 20px 0 0;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin-bottom: -20px;
 }
 
@@ -290,7 +304,8 @@ h3 img{
 }
 
 .metods h3{
-    font-family: 'Recoleta Alt Bold';
+    font-family: 'Merriweather';
+    font-weight: 700;
     font-size: 28px;
     margin: 10px 30px 10px 30px;
     color: #FCEADC;
@@ -301,6 +316,13 @@ h3 img{
     color: #FCEADC;
     text-align: center;
     margin: 10px 30px 10px 30px;
+}
+
+.metods .m-sparkle{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 20px 20px;
 }
 
 /* * Planes */
@@ -322,6 +344,67 @@ h3 img{
     color: #FCEADC;
 }
 
+.plans .plan-name, .plan-price{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 25px;
+    margin: 10px 30px 10px 30px;
+    color: #FCEADC;
+    text-align: left;
+}
+
+.plans .plan-price{
+    font-size: 35px;
+}
+
+.plans-grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.plans ul{
+    font-family: 'Merriweather';
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px 30px 10px 30px;
+    color: #FCEADC;
+    text-align: left;
+    padding: 0;
+}
+
+.plans li{
+    list-style: none;
+}
+
+.plan-contact{
+    border-radius: 10px;
+    background-color: #1D1918;
+    color: #FCEADC;
+    font-family: 'Quicksand';
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    height: 38px;
+    width: 180px;
+    cursor: pointer;
+    margin: 10px;
+    align-self: center;
+}
+
+.plan-card{
+    position: relative;
+    display: flex;
+    min-width: 300px;
+    max-height: 350px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px #464646;
+    background: linear-gradient(135deg, #FA4B22, #fd7d61);
+}
+
 
 
 @media screen and (min-width: 1em) and (max-width: 39.9em){
@@ -338,7 +421,12 @@ h3 img{
         height: 500px;
         width: 100vw;
         margin-top: 90px;
-    }    
+    }
+    .plans-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9em){
@@ -355,7 +443,12 @@ h3 img{
         height: 500px;
         width: 100vw;
         margin-top: 90px;
-    }    
+    }
+    .plans-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 }
   
 @media screen and (min-width: 64em) and (max-width: 74.9em){
@@ -365,6 +458,11 @@ h3 img{
     .slide-menu-wrap {
         display: none;
     }
+    .plans-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
 }
   
 @media screen and (min-width: 75em){
@@ -373,6 +471,11 @@ h3 img{
     }
     .slide-menu-wrap {
         display: none;
+    }
+    .plans-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
     }
 }
 

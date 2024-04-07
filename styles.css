@@ -335,6 +335,8 @@ h3 img{
     padding-top: 20px;
     background-color: #1D1918;
     border-radius: 20px 20px 0 0;
+    padding-bottom: 40px;
+    margin-bottom: -20px;
 }
 
 .plans h2{
@@ -405,31 +407,201 @@ h3 img{
     background: linear-gradient(135deg, #FA4B22, #fd7d61);
 }
 
+/* * Contacto */
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: #312B61;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 40px;
+    margin-bottom: -20px;
+}
 
-@media screen and (min-width: 1em) and (max-width: 39.9em){
+.form{
+    min-width: 600px;
+}
+
+.contact-form .c-sparkle{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 20px 20px;
+}
+
+.contact-form h3{
+    font-size: 25px;
+    padding: 0;
+    margin: 10px 30px 10px 30px;
+    color: #FCEADC;
+}
+
+.contact-form h2{
+    font-size: 40px;
+    padding: 0;
+    margin: 10px 30px 10px 30px;
+    color: #FCEADC;
+}
+
+.contact-form p{
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding: 0;
+    margin: 10px 30px 10px 30px;
+    color: #FCEADC;
+}
+
+.contact-form .select{
+    min-width: 600px;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+    border: solid 2px #737373;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    color: #312B61;
+    background-color: #FCEADC;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+  
+.select:focus {
+    outline: none;
+    border-color: #737373;
+}
+  
+.select option {
+    padding: 5px;
+    margin: 0;
+    border: none;
+    font-size: 16px;
+    color: #312B61;
+    background-color: #FCEADC;
+}
+  
+.select option:hover {
+    background-color: #FCEADC;
+}
+  
+.select option:selected {
+    background-color: #FCEADC;
+}
+
+.contact-form form, input{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form input, textarea{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #FCEADC;
+    color: #312B61;
+    outline: none;
+    border: solid 2px #737373;
+}
+
+.contact-form textarea{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    resize: none;
+    height: 200px;
+}
+
+.contact-form label{
+    margin: 5px 0px 5px 0px;
+    font-size: 24px;
+    color: #FCEADC;
+}
+
+.contact-form #btn{
+    align-self: center;
+    justify-self: center;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #FA4B22;
+    color: #FCEADC;
+}
+
+.contact-form #btn:hover{
+    background-color: #F98228;
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: #FCEADC;
+    border-radius: 20px 20px 0 0;
+}
+
+.FAQ h2{
+    font-size: 40px;
+    padding: 0;
+    margin: 10px 30px 10px 30px;
+    color: #312B61;
+}
+
+@media screen and (min-width: 1em) and (max-width: 39.99em){
     .hide-mobile{
         display: none;
     }
     .motto{
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
         align-items: center;
         justify-content: center;
         background-color: #554BA1;
-        height: 500px;
+        height: 600px;
         width: 100vw;
+        margin-bottom: 50px;
         margin-top: 90px;
+    }
+    .motto h3{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        min-height: 50px;
+        border-radius: 50px;
+        background-color: rgb(143,140,195, 0.5);
     }
     .plans-grid{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
+    }
+    .form{
+        min-width: 330px;
+    }
+    .contact-form .select{
+        min-width: 330px;
     }
 }
 
-@media screen and (min-width: 40em) and (max-width: 63.9em){
+@media screen and (min-width: 40em) and (max-width: 63.99em){
     .hide-mobile{
         display: none;
     }
@@ -444,10 +616,27 @@ h3 img{
         width: 100vw;
         margin-top: 90px;
     }
+    .motto h3{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgb(143,140,195, 0.5);
+    }
     .plans-grid{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
+    }
+    .form{
+        min-width: 430px;
+    }
+    .contact-form .select{
+        min-width: 430px;
     }
 }
   

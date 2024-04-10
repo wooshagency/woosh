@@ -15,4 +15,7 @@ btn_close.addEventListener('click', () => {
     btn_menu.className = 'btn-menu-active'
 })
 
-
+document.addEventListener('touchmove', 
+    event => event.scale !== 1 && event.preventDefault(),
+    { passive: false 
+});

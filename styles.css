@@ -343,8 +343,6 @@ h3 img{
     padding-top: 20px;
     background-color: #1D1918;
     border-radius: 20px 20px 0 0;
-    padding-bottom: 40px;
-    margin-bottom: -20px;
 }
 
 .plans h2{
@@ -388,6 +386,11 @@ h3 img{
     list-style: none;
 }
 
+.plans p{
+    font-family: 'Quicksand';
+    color:#FCEADC;
+}
+
 .plan-contact{
     border-radius: 10px;
     background-color: #1D1918;
@@ -412,7 +415,7 @@ h3 img{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 8px 8px 5px #464646;
-    background: linear-gradient(135deg, #FA4B22, #fd7d61);
+    background: linear-gradient(135deg, #8F8CC3, #48475c);
 }
 
 /* * Contacto */
@@ -423,8 +426,7 @@ h3 img{
     align-items: center;
     justify-content: center;
     padding-top: 20px;
-    background-color: #312B61;
-    border-radius: 20px 20px 0 0;
+    background-color: #1D1918;
     padding-bottom: 40px;
     margin-bottom: -20px;
 }
@@ -433,7 +435,7 @@ h3 img{
     min-width: 600px;
 }
 
-.contact-form .c-sparkle{
+.contact-form .m-sparkle{
     height: 20px;
     width: 20px;
     vertical-align: middle;
@@ -454,12 +456,12 @@ h3 img{
     color: #FCEADC;
 }
 
-.contact-form p{
+.contact-form a{
     font-family: 'Quicksand';
     font-size: 20px;
     padding: 0;
     margin: 10px 30px 10px 30px;
-    color: #FCEADC;
+    color: #FA4B22;
 }
 
 .contact-form .select{
@@ -470,7 +472,7 @@ h3 img{
     border: solid 2px #737373;
     font-family: 'Quicksand';
     font-size: 20px;
-    color: #312B61;
+    color: #1D1918;
     background-color: #FCEADC;
     appearance: none;
     -webkit-appearance: none;
@@ -487,7 +489,7 @@ h3 img{
     margin: 0;
     border: none;
     font-size: 16px;
-    color: #312B61;
+    color: #1D1918;
     background-color: #FCEADC;
 }
   
@@ -513,7 +515,7 @@ h3 img{
     margin-top: 10px;
     margin-bottom: 20px;
     background-color: #FCEADC;
-    color: #312B61;
+    color: #1D1918;
     outline: none;
     border: solid 2px #737373;
     border-radius: 10px;

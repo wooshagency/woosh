@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  max-width: 360px;
+  margin: 0;
+  font-family: Merriweather, sans-serif;
+}
+
+/*CONSTANTES GLOBALES*/
+:root{
+  --color-deep-purple: #554BA1;
+  --color-cream: #FCEADC;
+  --color-midnight: #312B61;
+}
+
+.bold{
+  font-weight: bold;
+}

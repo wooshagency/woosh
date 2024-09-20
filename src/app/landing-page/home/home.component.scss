@@ -5,7 +5,7 @@
   height: 100%;
   background-image: url("/assets/images/background-waves.svg");
   background-repeat: no-repeat;
-  padding: 60px 30px;
+  padding: 60px 24px 124px 24px;
 }
 
 p{
@@ -40,8 +40,17 @@ h1, p{
   min-width: 314px;
 
   h1 {
-    font-size: 40px;
+    font-family: Merriweather Sans, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
     margin: 0;
+
+    .italic{
+      font-family: Merriweather, sans-serif;
+      font-style: italic;
+      font-weight: 900;
+    }
+
   }
 
   p{

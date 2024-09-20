@@ -1,0 +1,29 @@
+.display {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: 44px;
+  overflow: hidden; /* Oculta el texto que sale del área visible */
+  background-color: var(--color-midnight); /* Color de fondo simulando un cartel LED */
+  color: var(--color-cream); /* Color del texto como si fuera LED verde */
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  .display-content {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: display 10s linear infinite; /* Define la animación */
+  }
+
+  img {
+    margin: 0 8px;
+  }
+}
+
+/* Animación de desplazamiento */
+@keyframes display {
+  from {
+    transform: translateX(100%); /* Inicia fuera del contenedor (derecha) */
+  }
+  to {
+    transform: translateX(-100%); /* Termina fuera del contenedor (izquierda) */
+  }
+}

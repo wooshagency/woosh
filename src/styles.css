@@ -1,10 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-  height: 100%;
-}
-
 body {
+  height: 100%;
   max-width: 360px;
   margin: 0;
   font-family: Merriweather, sans-serif;
@@ -15,6 +12,8 @@ body {
   --color-deep-purple: #554BA1;
   --color-cream: #FCEADC;
   --color-midnight: #312B61;
+  --color-warm-black: #1D1918;
+  --color-coral-red: #FA4B22;
 }
 
 .bold{

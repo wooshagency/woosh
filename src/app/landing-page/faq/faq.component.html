@@ -1,0 +1,41 @@
+<ng-container>
+  <body class="faq">
+
+    <h1>Preguntas Frecuentes</h1>
+
+    <mat-expansion-panel class="expansion-panel" #panel1="matExpansionPanel">
+      <mat-expansion-panel-header class="panel-header">
+        <img
+          [src]="panel1.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
+          class="custom-expand-button" alt="expand/shrink-icon">
+        <mat-panel-title class="panel-title">
+          ¿Cuáles son los métodos de pago?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Woosh es una agencia de diseño y desarrollo enfocada en las mejores soluciones digitales.</p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expansion-panel" #panel2="matExpansionPanel">
+      <mat-expansion-panel-header class="panel-header">
+        <img
+          [src]="panel2.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
+          class="custom-expand-button" alt="expand/shrink-icon">
+        <mat-panel-title class="panel-title">
+          ¿Hacen soporte técnico para web?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expansion-panel" #panel3="matExpansionPanel">
+      <mat-expansion-panel-header class="panel-header">
+        <img
+          [src]="panel3.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
+          class="custom-expand-button" alt="expand/shrink-icon">
+        <mat-panel-title class="panel-title">
+          ¿Realizan aplicaciones móviles?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+  </body>
+</ng-container>

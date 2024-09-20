@@ -1,0 +1,53 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background-color: var(--color-cream);
+  padding: 60px 30px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-warm-black);
+  font-weight: bold;
+  font-size: 32px;
+  font-family: Merriweather, sans-serif;
+  margin: 0;
+}
+
+.expansion-panel {
+  width: 328px;
+  --mat-expansion-container-background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: 2px #1D1918 solid;
+  border-radius: 0;
+
+  .panel-header {
+    padding: 0 !important;
+  }
+
+  .panel-title {
+    font-family: Quicksand, sans-serif;
+    color: var(--color-warm-black);
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 !important;
+  }
+
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+
+  p {
+    font-family: Quicksand, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin: -8px 8px 8px 8px;
+  }
+
+}
+
+::ng-deep .mat-expansion-indicator {
+  display: none; /* Oculta la flecha por defecto */
+}

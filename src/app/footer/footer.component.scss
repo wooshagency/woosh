@@ -1,0 +1,14 @@
+.footer {
+  max-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-midnight);
+  padding: 20px 16px;
+}
+
+.logo {
+  width: 115px;
+  height: 37px;
+}

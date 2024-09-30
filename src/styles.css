@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   height: 100%;
   max-width: 360px;
-  margin: 0;
   font-family: Merriweather, sans-serif;
 }
 
@@ -14,6 +18,7 @@ body {
   --color-midnight: #312B61;
   --color-warm-black: #1D1918;
   --color-coral-red: #FA4B22;
+  --color-burnt-orange: #F98228;
 }
 
 .bold{

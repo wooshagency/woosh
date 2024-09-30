@@ -1,8 +1,63 @@
 .nav-bar{
+  height: 64px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 0 16px;
-  background-color: var(--color-midnight);
-  height: 64px;
+  background-color: transparent; /* Fondo transparente inicialmente */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+  z-index: 1000; /* Para mantener la barra encima del contenido */
+}
+
+.nav-bar.scrolled, .nav-bar.background-midnight {
+  background-color: var(--color-midnight); /* Fondo oscuro cuando se hace scroll */
+  transition: background-color 0.3s ease-in-out; /* Aumenta la duración para que coincida con el menú */
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+/* Menú desplegable (inicialmente oculto) */
+.dropdown-menu {
+  position: fixed;
+  top: 64px; /* Ajusta esto según la altura de tu nav-bar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 64px); /* Ocupa toda la pantalla menos la altura de la nav-bar */
+  background-color: var(--color-midnight); /* Color oscuro con algo de transparencia */
+  color: white;
+  overflow: hidden;
+  max-height: 0; /* Oculto por defecto */
+  transition: max-height 0.3s ease-in-out; /* Ajusta a 0.5s para sincronizar */
+  z-index: 999; /* Detrás de la nav-bar */
+}
+
+/* Lista de opciones dentro del menú desplegable */
+.dropdown-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 6px 8px;
+}
+
+.dropdown-menu ul li a {
+  color: var(--color-cream);
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Merriweather Sans, sans-serif;
+  font-weight: bold;
+}
+
+/* Estilo que muestra el menú */
+.menu-open {
+  max-height: calc(100vh - 64px); /* Altura del menú al abrirlo, ajusta según tus necesidades */
+  transition: max-height 0.3s ease-in-out; /* Sincroniza con la nav-bar */
 }

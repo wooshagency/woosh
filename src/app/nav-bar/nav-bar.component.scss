@@ -8,13 +8,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
-  background-color: transparent; /* Fondo transparente inicialmente */
+  background-color: var(--color-cream); /* Fondo transparente inicialmente */
   transition: background-color 0.3s ease; /* Transición suave al cambiar color */
   z-index: 1000; /* Para mantener la barra encima del contenido */
 }
 
-.nav-bar.scrolled, .nav-bar.background-midnight {
-  background-color: var(--color-midnight); /* Fondo oscuro cuando se hace scroll */
+.nav-bar.scrolled, .nav-bar.background-white {
+  background-color: #F1F1F1; /* Fondo oscuro cuando se hace scroll */
   transition: background-color 0.3s ease-in-out; /* Aumenta la duración para que coincida con el menú */
 }
 

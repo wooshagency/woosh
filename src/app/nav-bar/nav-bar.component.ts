@@ -14,7 +14,7 @@ export class NavBarComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     // Si el scroll es mayor a 50px, cambiamos el estado a true
-    this.scrolled = window.scrollY > 50;
+    this.scrolled = window.scrollY > 500;
   }
 
   toggleMenu() {

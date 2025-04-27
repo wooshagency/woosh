@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-image: url("/assets/images/background-waves.svg");
+  background-color: var(--color-cream);
   background-repeat: no-repeat;
-  padding: 180px 24px 124px 24px;
+  padding: 140px 24px 100px 24px;
 }
 
 p{
@@ -13,23 +13,25 @@ p{
 }
 
 h1, p{
-  color: var(--color-cream);
+  color: var(--color-warm-black);
 }
 
-.home-text{
+.home-title {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 60px;
+  margin-bottom: 30px;
   min-width: 314px;
+  line-height: 1.15;
 
   h1 {
     font-family: Merriweather Sans, sans-serif;
-    font-weight: 400;
-    font-size: 36px;
+    font-weight: 555;
+    font-size: 40px;
     margin: 0;
+    z-index: 1;
 
-    .italic{
+    .italic {
       font-family: Merriweather, sans-serif;
       font-style: italic;
       font-weight: 900;
@@ -37,18 +39,48 @@ h1, p{
 
   }
 
-  p{
-    font-size: 16px;
-    font-weight: normal;
+  p {
+    font-size: 20px;
+    font-weight: 500;
     margin: 0;
+    text-align: end;
+  }
+
+  .orange-splash {
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    right: 5vw;
+    top: 6vh;
+    z-index: 0;
+  }
+
+  .purple-sparkle {
+    position: absolute;
+    width: 17vw;
+    height: 20vh;
+    left: 0;
+    top: 24.2vh;
+    z-index: 0;
+  }
+
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .pictures {
+    margin-left: auto;
   }
 
 }
 
 .contact-us-btn{
-  font-family: Merriweather Sans, sans-serif;
-  background-color: var(--color-burnt-orange);
-  color: var(--color-cream);
+  font-family: Merriweather, sans-serif;
+  background-color: var(--color-warm-black);
+  color: #F1F1F1;
   font-weight: bolder;
   font-size: 24px;
   width: 198px;

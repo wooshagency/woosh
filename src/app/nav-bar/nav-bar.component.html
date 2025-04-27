@@ -1,6 +1,6 @@
 <ng-container>
-  <body [ngClass]="{ 'background-midnight': isMenuOpen || scrolled || bgMidnight }" class="nav-bar">
-    <img alt="woosh-logo" src="assets/icons/logo.svg">
+  <body [ngClass]="{ 'background-white': isMenuOpen || scrolled || bgMidnight }" class="nav-bar">
+    <img alt="Woosh logo" src="assets/icons/logo.svg">
     <img src="{{ isMenuOpen ? 'assets/icons/close.svg' : 'assets/icons/menu.svg' }}"
          alt="Menu Icon" class="menu-icon" (click)="toggleMenu()">
     <!-- Menú desplegable que aparecerá desde la parte superior -->

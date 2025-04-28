@@ -1,0 +1,40 @@
+.content{
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 23px;
+
+  h2 {
+    color: var(--color-warm-black);
+    font-weight: bold;
+    font-size: 36px;
+    font-family: Merriweather, sans-serif;
+    margin: 0;
+  }
+
+  span {
+    font-style: italic;
+    color: var(--color-deep-purple);
+    font-weight: bolder;
+  }
+
+  p {
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    margin: 0;
+  }
+
+}
+
+.workspace {
+  margin-top: -1px;
+}
+

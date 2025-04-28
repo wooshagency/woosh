@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './landing-page/home/home.component';
 import {MatCardModule} from "@angular/material/card";
 import { ContentComponent } from './landing-page/content/content.component';
-import { AchievementsComponent } from './landing-page/content/achievements/achievements.component';
+import { ApproachComponent } from './landing-page/content/approach/approach.component';
 import { OurServicesComponent } from './landing-page/content/our-services/our-services.component';
 import { ProjectsComponent } from './landing-page/content/projects/projects.component';
 import { DividerComponent } from './divider/divider.component';
@@ -24,7 +24,7 @@ import { FaqComponent } from './landing-page/faq/faq.component';
     LandingPageComponent,
     HomeComponent,
     ContentComponent,
-    AchievementsComponent,
+    ApproachComponent,
     OurServicesComponent,
     ProjectsComponent,
     DividerComponent,

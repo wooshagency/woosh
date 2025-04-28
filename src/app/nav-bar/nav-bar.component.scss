@@ -14,7 +14,7 @@
 }
 
 .nav-bar.scrolled, .nav-bar.background-white {
-  background-color: #F1F1F1; /* Fondo oscuro cuando se hace scroll */
+  background-color: var(--color-white); /* Fondo oscuro cuando se hace scroll */
   transition: background-color 0.3s ease-in-out; /* Aumenta la duración para que coincida con el menú */
 }
 

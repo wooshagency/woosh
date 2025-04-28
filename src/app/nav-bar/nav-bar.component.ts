@@ -9,7 +9,7 @@ export class NavBarComponent {
 
   scrolled = false; // Para manejar el estado de scroll
   isMenuOpen = false; // Estado del menú (abierto o cerrado)
-  bgMidnight = false; // Controla el color del background
+  bgBlack = false; // Cambia el color del background
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -18,25 +18,18 @@ export class NavBarComponent {
   }
 
   toggleMenu() {
-    if (this.isMenuOpen) {
-      // Si el menú está abierto y lo vamos a cerrar
-      this.isMenuOpen = false;
-      if (this.bgMidnight) {
-        // Agrega un delay antes de cambiar la clase para el fondo de la barra de navegación
-        setTimeout(() => {
-          this.bgMidnight = false;
-        }, 300); // Retraso que coincide con la duración de la transición
-      }
-    } else {
-      // Si el menú está cerrado, lo abrimos y cambiamos el fondo inmediatamente
-      if (!this.scrolled){
-        setTimeout( () => {
-          this.isMenuOpen = true;
-        }, 300);
-      } else {
+    if (!this.isMenuOpen) {
+      // Abrir: primero cambiar color, después abrir menú
+      this.bgBlack = true;
+      setTimeout(() => {
         this.isMenuOpen = true;
-      }
-      this.bgMidnight = true;
+      }, 300); // Espera lo que dure la transición del background
+    } else {
+      // Cerrar: primero esconder menú, después cambiar color
+      this.isMenuOpen = false;
+      setTimeout(() => {
+        this.bgBlack = false;
+      }, 300);
     }
   }
 }

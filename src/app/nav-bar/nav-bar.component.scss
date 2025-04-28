@@ -14,7 +14,12 @@
 }
 
 .nav-bar.scrolled, .nav-bar.background-white {
-  background-color: var(--color-white); /* Fondo oscuro cuando se hace scroll */
+  background-color: var(--color-white); /* Fondo claro cuando se hace scroll */
+  transition: background-color 0.3s ease-in-out; /* Aumenta la duración para que coincida con el menú */
+}
+
+.nav-bar.background-black {
+  background-color: var(--color-warm-black); /* Fondo oscuro cuando se abre el menú */
   transition: background-color 0.3s ease-in-out; /* Aumenta la duración para que coincida con el menú */
 }
 
@@ -29,8 +34,7 @@
   left: 0;
   width: 100%;
   height: calc(100vh - 64px); /* Ocupa toda la pantalla menos la altura de la nav-bar */
-  background-color: var(--color-midnight); /* Color oscuro con algo de transparencia */
-  color: white;
+  background-color: var(--color-warm-black); /* Color oscuro con algo de transparencia */
   overflow: hidden;
   max-height: 0; /* Oculto por defecto */
   transition: max-height 0.3s ease-in-out; /* Ajusta a 0.5s para sincronizar */
@@ -49,7 +53,7 @@
 }
 
 .dropdown-menu ul li a {
-  color: var(--color-cream);
+  color: var(--color-white);
   text-decoration: none;
   font-size: 24px;
   font-family: Merriweather Sans, sans-serif;
@@ -60,4 +64,12 @@
 .menu-open {
   max-height: calc(100vh - 64px); /* Altura del menú al abrirlo, ajusta según tus necesidades */
   transition: max-height 0.3s ease-in-out; /* Sincroniza con la nav-bar */
+}
+
+.icon-white path{
+  fill: var(--color-white) !important;
+}
+
+.icon-black path{
+  fill: var(--color-warm-black) !important;
 }

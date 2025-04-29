@@ -2,10 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 0 23px;
+}
+
+.services-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
-h1 {
+h2 {
+  align-self: start;
   color: var(--color-warm-black);
   font-weight: bold;
   font-size: 32px;
@@ -14,7 +23,6 @@ h1 {
 }
 
 .expansion-panel {
-  width: 328px;
   --mat-expansion-container-background-color: transparent !important;
   box-shadow: none !important;
   border-bottom: 2px #1D1918 solid;
@@ -25,7 +33,7 @@ h1 {
   }
 
   .panel-title {
-    font-family: Quicksand, sans-serif;
+    font-family: Merriweather Sans, sans-serif;
     color: var(--color-warm-black);
     font-size: 24px;
     font-weight: bold;
@@ -72,4 +80,16 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   font-size: 24px;
+}
+
+.contact-us-btn {
+  font-family: Merriweather, sans-serif;
+  background-color: var(--color-warm-black);
+  color: var(--color-white);
+  font-weight: bolder;
+  font-size: 24px;
+  width: 198px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
 }

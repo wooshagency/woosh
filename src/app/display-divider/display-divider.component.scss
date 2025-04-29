@@ -16,15 +16,15 @@
     width: fit-content;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     will-change: transform;
-    animation: display 10s infinite linear; /* Define la animación */
+    animation: display 16s infinite linear; /* Define la animación */
   }
 
   .content1 {
-    animation-delay: calc(10s / 2 * (2 - 1) * -1);
+    animation-delay: calc(16s / 2 * (2 - 1) * -1);
   }
 
   .content2 {
-    animation-delay: calc(10s / 2 * (2 - 2) * -1);;
+    animation-delay: calc(16s / 2 * (2 - 2) * -1);;
   }
 
   img {

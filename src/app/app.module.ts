@@ -15,7 +15,7 @@ import { DividerComponent } from './divider/divider.component';
 import { DisplayDividerComponent } from './display-divider/display-divider.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { FooterComponent } from './footer/footer.component';
-import { FaqComponent } from './landing-page/faq/faq.component';
+import { FaqComponent } from './landing-page/content/faq/faq.component';
 
 @NgModule({
   declarations: [

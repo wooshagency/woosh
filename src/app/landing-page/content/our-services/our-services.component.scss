@@ -57,7 +57,8 @@ h2 {
 }
 
 .services-table {
-  width: 305px;
+  width: 100%;
+  min-width: 305px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
   column-gap: 8px;
@@ -92,4 +93,13 @@ h2 {
   height: 46px;
   border-radius: 10px;
   border: none;
+}
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+#services {
+  scroll-margin-top: 80px;
 }

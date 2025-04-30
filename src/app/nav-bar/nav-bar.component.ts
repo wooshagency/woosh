@@ -32,4 +32,12 @@ export class NavBarComponent {
       }, 300);
     }
   }
+
+  handleLogoClick() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (this.isMenuOpen) {
+      this.toggleMenu();
+    }
+  }
 }

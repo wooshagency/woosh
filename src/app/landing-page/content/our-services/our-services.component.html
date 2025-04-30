@@ -1,12 +1,12 @@
 <ng-container>
-  <body class="services">
+  <section class="services" id="services">
     <h2>Nuestros servicios</h2>
-    <section class="services-content">
+    <div class="services-content">
       <mat-expansion-panel class="expansion-panel" #panel1="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel1.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel1.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
             Diseño
           </mat-panel-title>
@@ -31,8 +31,8 @@
       <mat-expansion-panel class="expansion-panel" #panel2="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel2.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel2.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
             Branding
           </mat-panel-title>
@@ -57,8 +57,8 @@
       <mat-expansion-panel class="expansion-panel" #panel3="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel3.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel3.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
             Desarrollo Web
           </mat-panel-title>
@@ -79,9 +79,9 @@
           </div>
         </div>
       </mat-expansion-panel>
-    </section>
+    </div>
     <button class="contact-us-btn">
       Contáctanos
     </button>
-  </body>
+  </section>
 </ng-container>

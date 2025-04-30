@@ -1,14 +1,14 @@
 <ng-container>
-  <body class="faq">
+  <section class="faq" id="faq">
     <h2>Preguntas Frecuentes</h2>
-    <section class="faq-content">
+    <div class="faq-content">
       <mat-expansion-panel class="expansion-panel" #panel1="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel1.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel1.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
-            ¿Cuáles son los métodos de pago?
+            Pregunta 1
           </mat-panel-title>
         </mat-expansion-panel-header>
         <p>Woosh es una agencia de diseño y desarrollo enfocada en las mejores soluciones digitales.</p>
@@ -17,10 +17,10 @@
       <mat-expansion-panel class="expansion-panel" #panel2="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel2.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel2.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
-            ¿Hacen soporte técnico para web?
+            Pregunta 2
           </mat-panel-title>
         </mat-expansion-panel-header>
       </mat-expansion-panel>
@@ -28,13 +28,13 @@
       <mat-expansion-panel class="expansion-panel" #panel3="matExpansionPanel">
         <mat-expansion-panel-header class="panel-header">
           <img
-            [src]="panel3.expanded ? 'assets/icons/button-shrink.svg' : 'assets/icons/button-expand.svg'"
-            class="custom-expand-button" alt="expand/shrink-icon">
+            [src]="panel3.expanded ? 'assets/icons/arrow-up.svg' : 'assets/icons/arrow-down.svg'"
+            class="custom-expand-button" [alt]="panel1.expanded ? 'Flecha hacia arriba para encoger' : 'Flecha hacia abajo para expandir'">
           <mat-panel-title class="panel-title">
-            ¿Realizan aplicaciones móviles?
+            Pregunta 3
           </mat-panel-title>
         </mat-expansion-panel-header>
       </mat-expansion-panel>
-    </section>
-  </body>
+    </div>
+  </section>
 </ng-container>

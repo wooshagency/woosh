@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  openLink() {
+    window.open('https://www.behance.net/wooshagency', '_blank');
+  }
+
 }

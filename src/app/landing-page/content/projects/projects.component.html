@@ -1,5 +1,29 @@
 <ng-container>
   <section class="projects" id="projects">
-    <h2>Nuestro trabajo</h2>
+    <div class="projects-content">
+      <h2>Nuestro trabajo</h2>
+      <app-card
+        [imageUrl]="'assets/images/wavefront1.png'"
+        [title]="'Wavefront'"
+        [description]="'Haciendo una UI amigable para un token launchpad en Web3.'"
+        [tags]="['Diseño UX/UI', 'Branding']"
+        [link]="'https://www.behance.net/wooshagency'"
+      ></app-card>
+      <app-card
+        [imageUrl]="'assets/images/wavefront2.png'"
+        [title]="'Wavefront'"
+        [description]="'Haciendo una UI amigable para un token launchpad en Web3.'"
+        [tags]="['Diseño UX/UI', 'Desarrollo']"
+        [link]="'https://www.behance.net/wooshagency'"
+      ></app-card>
+      <app-card
+        [imageUrl]="'assets/images/wavefront3.png'"
+        [title]="'Wavefront'"
+        [description]="'Haciendo una UI amigable para un token launchpad en Web3.'"
+        [tags]="['Branding']"
+        [link]="'https://www.behance.net/wooshagency'"
+      ></app-card>
+      <button class="btn-more" (click)="openLink()">Ver más</button>
+    </div>
   </section>
 </ng-container>

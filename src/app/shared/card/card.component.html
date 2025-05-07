@@ -1,0 +1,12 @@
+<a [href]="link" target="_blank" rel="noopener noreferrer" class="card-link">
+  <div class="card">
+    <img [src]="imageUrl" alt="{{ title }}" class="card-img" />
+
+    <h2 class="card-title">{{ title }}</h2>
+    <p class="card-description">{{ description }}</p>
+
+    <div class="card-tags">
+      <span class="tag" *ngFor="let tag of tags">{{ tag }}</span>
+    </div>
+  </div>
+</a>

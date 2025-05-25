@@ -1,15 +1,42 @@
-import {Component, HostListener} from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from "@angular/router";
+import { filter } from "rxjs";
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
 
+  isLandingPage = false;
   scrolled = false; // Para manejar el estado de scroll
   isMenuOpen = false; // Estado del menú (abierto o cerrado)
   bgBlack = false; // Cambia el color del background
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.checkRoute();
+
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.checkRoute();
+      });
+
+    window.addEventListener('scroll', this.onScroll, true);
+  }
+
+  checkRoute(): void {
+    const currentUrl = this.router.url;
+    this.isLandingPage = currentUrl === '/' || currentUrl.includes('landing-page');
+  }
+
+  onScroll = (): void => {
+    if (!this.isLandingPage) return;
+    this.scrolled = window.scrollY > 0;
+  };
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

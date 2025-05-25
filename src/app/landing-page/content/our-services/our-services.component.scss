@@ -22,7 +22,79 @@ h2 {
   margin: 0;
 }
 
-.expansion-panel {
+.service {
+
+  h3 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Merriweather Sans, sans-serif;
+    color: var(--color-warm-black);
+    text-align: left;
+    margin: 0;
+  }
+
+  p {
+    margin: 10px 0 30px;
+    color: var(--color-warm-black);
+    font-size: 20px;
+    font-family: Quicksand, sans-serif;
+  }
+
+  .services-table {
+    width: 100%;
+    min-width: 305px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    column-gap: 10px;
+
+    .services-table-column {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--color-warm-black);
+      font-size: 20px;
+      font-family: Merriweather Sans, sans-serif;
+      font-weight: 400;
+    }
+
+  }
+
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  height: 2px;
+  background-color: var(--color-warm-black);
+  margin: 0;
+}
+
+.contact-us-btn {
+  font-family: Merriweather, sans-serif;
+  background-color: var(--color-warm-black);
+  color: var(--color-white);
+  font-weight: bolder;
+  font-size: 24px;
+  width: 198px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+}
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+#services {
+  scroll-margin-top: 80px;
+}
+
+/*.expansion-panel {
   --mat-expansion-container-background-color: transparent !important;
   box-shadow: none !important;
   border-bottom: 2px #1D1918 solid;
@@ -47,59 +119,11 @@ h2 {
 }
 
 ::ng-deep .mat-expansion-indicator {
-  display: none; /* Oculta la flecha por defecto */
+  display: none; !* Oculta la flecha por defecto *!
 }
 
 .panel-body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.services-table {
-  width: 100%;
-  min-width: 305px;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  column-gap: 8px;
-}
-
-.service-item {
-  font-size: 16px;
-  font-weight: normal;
-  font-family: Quicksand, sans-serif;
-  color: var(--color-warm-black);
-}
-
-.prices {
-  margin-bottom: 10px;
-}
-
-.prices-link {
-  font-family: Merriweather, sans-serif;
-  color: var(--color-coral-red);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.contact-us-btn {
-  font-family: Merriweather, sans-serif;
-  background-color: var(--color-warm-black);
-  color: var(--color-white);
-  font-weight: bolder;
-  font-size: 24px;
-  width: 198px;
-  height: 46px;
-  border-radius: 10px;
-  border: none;
-}
-
-:host {
-  display: block;
-  width: 100%;
-}
-
-#services {
-  scroll-margin-top: 80px;
-}
+}*/

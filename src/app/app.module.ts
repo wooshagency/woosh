@@ -17,6 +17,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import { FooterComponent } from './shared/footer/footer.component';
 import { FaqComponent } from './landing-page/content/faq/faq.component';
 import { CardComponent } from './shared/card/card.component';
+import { NextLevelComponent } from './landing-page/content/next-level/next-level.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CardComponent } from './shared/card/card.component';
     DisplayDividerComponent,
     FooterComponent,
     FaqComponent,
-    CardComponent
+    CardComponent,
+    NextLevelComponent
   ],
     imports: [
         BrowserModule,

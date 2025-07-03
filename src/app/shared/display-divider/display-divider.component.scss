@@ -11,12 +11,17 @@
   .display-content {
     left: 100%;
     position: absolute;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
     width: fit-content;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     will-change: transform;
     animation: display 16s infinite linear; /* Define la animación */
+  }
+
+  .display-content p {
+    margin: 0;
   }
 
   .content1 {
@@ -37,4 +42,50 @@
   to {
     left: -250%; /* Termina fuera del contenedor (izquierda) */
   }
+}
+
+@media (min-width: 1080px) {
+
+  .display {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 72px;
+    overflow: hidden; /* Oculta el texto que sale del área visible */
+    background-color: var(--color-warm-black);
+    color: var(--color-cream);
+    padding: 16px 64px;
+    box-sizing: border-box;
+    position: relative;
+
+    .display-content {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      gap: 64px;
+      overflow: hidden;
+      white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+      will-change: transform;
+      animation: display 30s infinite linear; /* Define la animación */
+    }
+
+    .display-content p {
+      font-size: 32px;
+    }
+
+    .display-content img {
+      width: 30px;
+    }
+
+    .content1 {
+      animation-delay: calc(30s / 2 * (2 - 1) * -1);
+    }
+
+    .content2 {
+      animation-delay: calc(30s / 2 * (2 - 2) * -1);;
+    }
+
+    img {
+      margin: 0 8px;
+    }
+  }
+
 }

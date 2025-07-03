@@ -30,7 +30,7 @@ export class NavBarComponent implements OnInit {
 
   checkRoute(): void {
     const currentUrl = this.router.url;
-    this.isLandingPage = currentUrl === '/' || currentUrl.includes('landing-page');
+    this.isLandingPage = currentUrl !== '/contact-page'
   }
 
   onScroll = (): void => {
@@ -61,10 +61,22 @@ export class NavBarComponent implements OnInit {
   }
 
   handleLogoClick() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (this.router.url === '/' || this.router.url.includes('/#')) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/']).then(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      })
+    }
 
     if (this.isMenuOpen) {
       this.toggleMenu();
     }
+  }
+
+  handleContactBtn() {
+    this.router.navigate(['/contact-page']).then(() => {
+      window.scrollTo({top: 0, behavior: 'instant'});
+    })
   }
 }

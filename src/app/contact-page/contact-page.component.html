@@ -47,7 +47,11 @@
 
       <!-- Descripción -->
       <label for="project-info">Háblanos de tu proyecto*</label>
-      <textarea id="project-info" formControlName="description" placeholder="Descripción del proyecto, público objetivo, etc."></textarea>
+      <textarea id="project-info"
+                formControlName="description"
+                placeholder="Descripción del proyecto, público objetivo, etc."
+                maxlength="500">
+      </textarea>
 
       <!-- ¿Cómo nos conociste? -->
       <label for="reference">¿Cómo nos conociste?*</label>
@@ -59,6 +63,13 @@
                 (click)="toggleArrayValue('references', f)">
           {{ f }}
         </button>
+        <!-- Textarea para "Otro" -->
+        <textarea *ngIf="showOtherReference" id="other-reference"
+                  formControlName="otherReference"
+                  placeholder="¿Cómo nos conociste?"
+                  maxlength="140"
+                  style="width: 100%;">
+        </textarea>
       </div>
 
       <!-- Botón Enviar -->

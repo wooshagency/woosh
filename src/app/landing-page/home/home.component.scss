@@ -69,6 +69,10 @@
         margin-left: auto;
       }
 
+      .pictures-desktop {
+        display: none;
+      }
+
       p {
         font-size: 20px;
         font-weight: 500;
@@ -88,5 +92,103 @@
     height: 46px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
   }
+}
+
+@media (min-width: 1080px) {
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: var(--color-cream);
+    background-repeat: no-repeat;
+    padding: 210px 50px 110px 50px;
+
+    p {
+      font-family: Quicksand, sans-serif;
+    }
+
+    h1, p {
+      color: var(--color-warm-black);
+    }
+
+    .home-title {
+      display: flex;
+      flex-direction: row;
+      gap: 200px;
+      margin: 0;
+      min-width: 314px;
+      margin-bottom: 30px;
+      line-height: 1.15;
+
+      .home-title-wrapper {
+        width: 600px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          font-family: Merriweather Sans, sans-serif;
+          font-weight: 555;
+          font-size: 70px;
+          margin: 0;
+          z-index: 1;
+
+          .italic {
+            font-family: Merriweather, sans-serif;
+            font-style: italic;
+            font-weight: 900;
+          }
+        }
+
+        .orange-splash {
+          position: absolute;
+          width: 7rem;
+          right: 3rem;
+          top: -4rem;
+          z-index: 0;
+        }
+
+        .purple-sparkle {
+          position: absolute;
+          width: 6rem;
+          left: -2rem;
+          bottom: 0;
+          z-index: 0;
+        }
+      }
+
+      .home-text {
+        width: 485px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .pictures {
+          display: none;
+        }
+
+        .pictures-desktop {
+          display: block;
+          margin-left: auto;
+        }
+
+        p {
+          font-size: 32px;
+          font-weight: 500;
+          margin: 0;
+          text-align: end;
+        }
+      }
+    }
+
+    .contact-us-btn {
+      display: none;
+    }
+  }
+
 }

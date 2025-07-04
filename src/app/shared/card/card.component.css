@@ -51,3 +51,12 @@
 .card-link:hover {
   transform: translateY(-2px);
 }
+
+@media (min-width: 1080px) {
+  .card-title {
+    font-size: 24px;
+  }
+  .card-description {
+    font-size: 24px;
+  }
+}

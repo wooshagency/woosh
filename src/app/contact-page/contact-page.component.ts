@@ -59,4 +59,16 @@ export class ContactPageComponent {
     }
   }
 
+/*
+  copyEmail(emailElement: HTMLElement): void {
+    const email = emailElement.textContent?.trim() || '';
+
+    navigator.clipboard.writeText(email).then(() => {
+      console.log('Correo copiado al portapapeles:', email);
+    }).catch(err => {
+      console.error('Error al copiar:', err);
+    });
+  }
+*/
+
 }

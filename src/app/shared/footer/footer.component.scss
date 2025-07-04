@@ -35,3 +35,20 @@
   flex-direction: row;
   gap: 12px;
 }
+
+@media (min-width: 1080px) {
+  .footer {
+    padding: 60px 100px;
+    gap: 30px;
+  }
+
+  .option-list ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .social-networks {
+    gap: 20px;
+  }
+}

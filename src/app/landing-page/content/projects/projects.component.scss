@@ -20,6 +20,12 @@ section {
     margin: 0;
   }
 
+  .cards-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
 }
 
 .btn-more {
@@ -43,4 +49,43 @@ section {
 
 #projects {
   scroll-margin-top: 80px;
+}
+
+@media (min-width: 1080px) {
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .projects-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    h2 {
+      align-self: center;
+      font-size: 48px;
+    }
+
+    .cards-section{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+  }
+
+  .btn-more {
+    width: 13em;
+    font-size: 24px;
+  }
+
+  #projects {
+    scroll-margin-top: 140px;
+  }
+
 }

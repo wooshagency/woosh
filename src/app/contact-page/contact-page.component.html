@@ -7,25 +7,25 @@
     <form class="content-form" [formGroup]="form" (ngSubmit)="onSubmit()">
       <!-- Nombre -->
       <label for="name">Nombre y apellido*</label>
-      <input id="name" type="text" formControlName="name" placeholder="María López"/>
+      <input id="name" required type="text" formControlName="name" placeholder="María López"/>
 
       <!-- Email -->
       <label for="email">Email*</label>
-      <input id="email" type="email" formControlName="email" placeholder="nombre@ejemplo.com"/>
+      <input id="email" required type="email" formControlName="email" placeholder="nombre@ejemplo.com"/>
 
       <!-- Teléfono -->
       <label for="phone">Teléfono de contacto*</label>
-      <input id="phone" type="text" formControlName="phone" placeholder="Escribe tu número acá"/>
+      <input id="phone" required type="text" formControlName="phone" placeholder="Escribe tu número acá"/>
 
       <!-- Servicios -->
       <label for="services-chips">¿Qué servicios necesitas?*</label>
       <p>Elige tantas opciones como desees</p>
       <div id="services-chips" class="chips">
         <button type="button"
-                *ngFor="let s of services"
-                [class.active]="form.value.services.includes(s)"
-                (click)="toggleArrayValue('services', s)">
-          {{ s }}
+                *ngFor="let service of services"
+                [class.active]="form.value.services.includes(service)"
+                (click)="toggleArrayValue('services', service)">
+          {{ service }}
         </button>
       </div>
 
@@ -34,10 +34,10 @@
       <p>Valores expresados en USD</p>
       <div id="budget-chips" class="chips">
         <button type="button"
-                *ngFor="let p of budget"
-                [class.active]="form.value.budget === p"
-                (click)="form.get('budget')?.setValue(p)">
-          {{ p }}
+                *ngFor="let range of budget"
+                [class.active]="form.value.budget === range"
+                (click)="form.get('budget')?.setValue(range)">
+          {{ range }}
         </button>
       </div>
 
@@ -58,10 +58,10 @@
       <p>Elige tantas opciones como desees</p>
       <div id="reference" class="chips">
         <button type="button"
-                *ngFor="let f of references"
-                [class.active]="form.value.references.includes(f)"
-                (click)="toggleArrayValue('references', f)">
-          {{ f }}
+                *ngFor="let reference of references"
+                [class.active]="form.value.references.includes(reference)"
+                (click)="toggleArrayValue('references', reference)">
+          {{ reference }}
         </button>
         <!-- Textarea para "Otro" -->
         <textarea *ngIf="showOtherReference" id="other-reference"
@@ -76,8 +76,15 @@
       <button type="submit">Agendar reunión</button>
     </form>
     <div class="content-email">
-      <h2>O escríbenos por mail</h2>
-      <a href="mailto:wooshdesignanddev@gmail.com">wooshdesignanddev@gmail.com</a>
+      <div class="sparkling-text">
+        <img src="assets/icons/stars.svg" alt="stars" class="star">
+        <h2>O escríbenos por mail</h2>
+        <img src="assets/icons/stars.svg" alt="stars" class="star2">
+      </div>
+      <div class="email">
+        <a href="mailto:wooshdesignanddev@gmail.com">wooshdesignanddev@gmail.com</a>
+        <img src="assets/icons/tabler_copy.svg" alt="copy" class="copy-icon">
+      </div>
     </div>
   </section>
 </ng-container>

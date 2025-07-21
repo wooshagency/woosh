@@ -8,14 +8,29 @@
       <!-- Nombre -->
       <label for="name">Nombre y apellido*</label>
       <input id="name" required type="text" formControlName="name" placeholder="María López"/>
+      <p *ngIf="form.get('name')?.touched && form.get('name')?.hasError('required')" class="error-text">
+        Tienes que completar el nombre
+      </p>
 
       <!-- Email -->
       <label for="email">Email*</label>
       <input id="email" required type="email" formControlName="email" placeholder="nombre@ejemplo.com"/>
+      <p *ngIf="form.get('email')?.touched && form.get('email')?.hasError('required')" class="error-text">
+        Tienes que completar el correo electrónico
+      </p>
+      <p *ngIf="form.get('email')?.touched && form.get('email')?.hasError('email')" class="error-text">
+        Ingresa un correo válido
+      </p>
 
       <!-- Teléfono -->
       <label for="phone">Teléfono de contacto*</label>
-      <input id="phone" required type="text" formControlName="phone" placeholder="Escribe tu número acá"/>
+      <input id="phone" required type="text" formControlName="phone" pattern="\d*" placeholder="Escribe tu número acá"/>
+      <p *ngIf="form.get('phone')?.touched && form.get('phone')?.hasError('required')" class="error-text">
+        Tienes que completar el teléfono
+      </p>
+      <p *ngIf="form.get('phone')?.dirty && form.get('phone')?.hasError('pattern')" class="error-text">
+        Solo se permiten números
+      </p>
 
       <!-- Servicios -->
       <label for="services-chips">¿Qué servicios necesitas?*</label>
@@ -28,6 +43,9 @@
           {{ service }}
         </button>
       </div>
+      <p *ngIf="form.get('services')?.touched && form.get('services')?.hasError('required')" class="error-text">
+        Debes seleccionar al menos un servicio
+      </p>
 
       <!-- Presupuesto -->
       <label for="budget-chips">¿Cuál es tu presupuesto?*</label>
@@ -40,6 +58,9 @@
           {{ range }}
         </button>
       </div>
+      <p *ngIf="form.get('budget')?.touched && form.get('budget')?.hasError('required')" class="error-text">
+        Debes seleccionar un presupuesto estimado
+      </p>
 
       <!-- Nombre Proyecto -->
       <label for="project-name">¿Cómo se llama tu proyecto?</label>
@@ -52,6 +73,9 @@
                 placeholder="Descripción del proyecto, público objetivo, etc."
                 maxlength="500">
       </textarea>
+      <p *ngIf="form.get('description')?.touched && form.get('description')?.hasError('required')" class="error-text">
+        Debes escribir al menos una breve descripción del proyecto
+      </p>
 
       <!-- ¿Cómo nos conociste? -->
       <label for="reference">¿Cómo nos conociste?*</label>
@@ -71,6 +95,17 @@
                   style="width: 100%;">
         </textarea>
       </div>
+      <p *ngIf="form.get('references')?.touched && form.get('references')?.hasError('required')" class="error-text">
+        Indica cómo llegaste a nosotros
+      </p>
+
+      <div class="recaptcha">
+        <re-captcha
+          formControlName="recaptchaToken"
+          siteKey="6LcpbokrAAAAABi2xxhta0zoVrfYvvaE1_24Dasr"
+          (resolved)="onCaptchaResolved($event)">
+        </re-captcha>
+      </div>
 
       <!-- Botón Enviar -->
       <button type="submit">Agendar reunión</button>
@@ -82,8 +117,8 @@
         <img src="assets/icons/stars.svg" alt="stars" class="star2">
       </div>
       <div class="email">
-        <a href="mailto:wooshdesignanddev@gmail.com">wooshdesignanddev@gmail.com</a>
-        <img src="assets/icons/tabler_copy.svg" alt="copy" class="copy-icon">
+        <a #emailRef href="mailto:wooshdesignanddev@gmail.com">wooshdesignanddev@gmail.com</a>
+        <img src="assets/icons/tabler_copy.svg" alt="copy" class="copy-icon" (click)="copyEmail(emailRef)">
       </div>
     </div>
   </section>

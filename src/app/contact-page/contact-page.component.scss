@@ -80,6 +80,36 @@
     }
   }
 
+  .recaptcha {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .error-text {
+    margin-top: -30px;
+    color: red;
+  }
+
+  input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched {
+    border-bottom: 2px solid red;
+    outline: none;
+  }
+
   button[type="submit"] {
     align-self: center;
     font-family: Merriweather Sans, sans-serif;

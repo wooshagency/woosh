@@ -21,6 +21,8 @@ import { NextLevelComponent } from './landing-page/content/next-level/next-level
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { RecaptchaModule } from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -41,12 +43,14 @@ import { ReactiveFormsModule } from "@angular/forms";
     ContactPageComponent
   ],
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        MatExpansionModule,
-        AppRoutingModule,
-        ReactiveFormsModule
+      BrowserModule,
+      BrowserAnimationsModule,
+      MatCardModule,
+      MatExpansionModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      HttpClientModule,
+      RecaptchaModule
     ],
   providers: [],
   bootstrap: [AppComponent]
